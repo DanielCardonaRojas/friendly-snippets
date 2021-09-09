@@ -1,62 +1,75 @@
 {
-    "Another test snippet": {
-        "prefix": "kkk",
+      "triple_a_test": {
+        "prefix": "aaa",
+        "description": "AAA test",
         "body": [
-            "class ${1:name} extends StatelessWidget {",
-            "  const ${1:name}({Key? key}) : super(key: key);\n",
-            "  @override",
-            "  Widget build(BuildContext context) {",
-            "    return Container(",
-            "      child: ${2:null},",
-            "    );",
-            "  }",
+            "test(",
+            "\t'should $1',",
+            "\t() async {",
+            "\t\t// arrange",
+            "\t\t$2",
+            "\t\t// act",
+            "\t\t$3",
+            "\t\t// assert",
+            "\t\t$4",
+            "\t},",
+            ");"
+        ],
+        "description": "Create unit test"
+    },
+    "MobX Store": {
+        "prefix": "mobx",
+        "body": [
+            "import 'package:mobx/mobx.dart';",
+            "part '${TM_FILENAME_BASE/(.*)/${1:/downcase}/}.g.dart';",
+            "",
+            "class $1Store extends _$1Store with _$$1Store {}",
+            "",
+            "abstract class _$1Store with Store {",
+            "\t${0}",
             "}"
         ],
-        "description": "Create a sample snippet"
+        "description": "Create a Stateless widget"
     },
-    "Freezed json serializable test": {
-        "prefix": "fzcd",
+    "Aqueduct model": {
+        "prefix": "aqdm",
+        "body": [
+            "class $1 extends ManagedObject<_$1> implements _$1 {\n",
+            "}",
+            "\n",
+            "class _$1 {\n",
+            "}"
+        ],
+        "description": "Create a Stateless widget"
+    },
+    "freezed class json serializable": {
+        "prefix": "fzcj",
         "body": [
             "@freezed",
-            "abstract class ${1:} with _$${1:} {\n",
-            "\tconst factory $1({}) = _$${1:};\n",
-            "\tfactory ${1:}.fromJson(Map<String, dynamic> json) => _$${1:}FromJson(json);\n",
+            "abstract class $1 with _\\$$1 {\n",
+            "\tconst factory $1({}) = _$1;\n",
+            "\tfactory $1.fromJson(Map<String, dynamic> json) => _$$1FromJson(json);\n",
             "}"
         ],
-        "description": "Create json serializable class"
+        "description": "Create a Stateless widget"
+    },
+    "freezed class": {
+        "prefix": "fzc",
+        "body": [
+            "@freezed",
+            "abstract class $1 with _\\$$1 {\n",
+            "\tconst factory $1({}) = _$1;\n",
+            "}"
+        ],
+        "description": "Create a Stateless widget"
     },
     "freezed class header": {
         "prefix": "fzd",
         "body": [
             "import 'package:freezed_annotation/freezed_annotation.dart';",
             "import 'package:meta/meta.dart';\n",
-            "part '${1:}.freezed.dart';",
-            "part '${1:}.g.dart';\n"
-        ]
-    },
-    "Freezed json serializable": {
-        "prefix": "fzcj",
-        "body": [
-            "@freezed",
-            "abstract class ${1:} with _${1:} {\n",
-            "\tconst factory $1({}) = _${1:};\n",
-            "\tfactory ${1:}.fromJson(Map<String, dynamic> json) => _${1:}FromJson(json);\n",
-            "}"
-        ],
-        "description": "Create json serializable class"
-    },
-    "My LuaSnip Test": {
-        "prefix": "myccc",
-        "body": [
-            "class ${1:name} extends StatelessWidget {",
-            "  const ${1:name}({Key? key}) : super(key: key);\n",
-            "  @override",
-            "  Widget build(BuildContext context) {",
-            "    return Container(",
-            "      child: ${2:null},",
-            "    );",
-            "  }",
-            "}"
+            "part '$1.freezed.dart';",
+            "part '$1.g.dart';\n"
         ],
         "description": "Create a Stateless widget"
     },
