@@ -14,6 +14,17 @@
         ],
         "description": "Create a sample snippet"
     },
+    "freezed json serializable": {
+        "prefix": "fzcj",
+        "body": [
+            "@freezed",
+            "abstract class $1 with _$$1 {\n",
+            "\tconst factory $1({}) = _$1;\n",
+            "\tfactory $1.fromJson(Map<String, dynamic> json) => _$$1FromJson(json);\n",
+            "}"
+        ],
+        "description": "Create json serializable class"
+    },
     "My LuaSnip Test": {
         "prefix": "myccc",
         "body": [
