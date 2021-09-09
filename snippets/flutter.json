@@ -1,4 +1,19 @@
 {
+    "My LuaSnip Test": {
+        "prefix": "myccc",
+        "body": [
+            "class ${1:name} extends StatelessWidget {",
+            "  const ${1:name}({Key? key}) : super(key: key);\n",
+            "  @override",
+            "  Widget build(BuildContext context) {",
+            "    return Container(",
+            "      child: ${2:null},",
+            "    );",
+            "  }",
+            "}"
+        ],
+        "description": "Create a Stateless widget"
+    },
     "Stateless Widget": {
         "prefix": "statelessW",
         "body": [
