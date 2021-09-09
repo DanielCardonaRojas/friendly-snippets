@@ -25,6 +25,15 @@
         ],
         "description": "Create json serializable class"
     },
+    "freezed class header": {
+        "prefix": "fzd",
+        "body": [
+            "import 'package:freezed_annotation/freezed_annotation.dart';",
+            "import 'package:meta/meta.dart';\n",
+            "part '${1:}.freezed.dart';",
+            "part '${1:}.g.dart';\n"
+        ]
+    },
     "Freezed json serializable": {
         "prefix": "fzcj",
         "body": [
