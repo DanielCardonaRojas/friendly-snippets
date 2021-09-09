@@ -14,7 +14,7 @@
         ],
         "description": "Create a sample snippet"
     },
-    "Freezed json serializable": {
+    "Freezed json serializable test": {
         "prefix": "fzcd",
         "body": [
             "@freezed",
