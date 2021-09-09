@@ -15,6 +15,17 @@
         "description": "Create a sample snippet"
     },
     "Freezed json serializable": {
+        "prefix": "fzcd",
+        "body": [
+            "@freezed",
+            "abstract class ${1:} with _$${1:} {\n",
+            "\tconst factory $1({}) = _$${1:};\n",
+            "\tfactory ${1:}.fromJson(Map<String, dynamic> json) => _$${1:}FromJson(json);\n",
+            "}"
+        ],
+        "description": "Create json serializable class"
+    },
+    "Freezed json serializable": {
         "prefix": "fzcj",
         "body": [
             "@freezed",
